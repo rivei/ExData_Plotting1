@@ -16,7 +16,7 @@ plot3 <- function(dir="../household_power_consumption.txt") {
         plot(datetime,febdata$Sub_metering_1,type = "l", xlab = "", ylab = "Energy sub metering")
         lines(datetime, febdata$Sub_metering_2, col="red")
         lines(datetime, febdata$Sub_metering_3, col="blue")
-        legend("topright", pch = c("-","-","-"), col=c("black","blue","red"), legend=c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"))
+        legend("topright", pch = c("-","-","-"), col=c("black","blue","red"), legend=c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"),lty=1)
         ## close the file device
         dev.off()
 }
