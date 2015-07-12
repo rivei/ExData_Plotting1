@@ -6,13 +6,13 @@ plot2 <- function(dir="../household_power_consumption.txt") {
         ## load the data from dates 2007-02-01 and 2007-02-02
         alldata <- read.csv(dir, header = TRUE, sep = ";", na.strings = "?")
         febdata <- subset(alldata, as.Date(Date,"%d/%m/%Y") == "2007-02-01" | as.Date(Date,"%d/%m/%Y") == "2007-02-02")
-        datetime <- strptime(paste(febdata$Date,subset1$Time), "%d/%m/%Y %H:%M:%S")
+        datetime <- strptime(paste(febdata$Date,febdata$Time), "%d/%m/%Y %H:%M:%S")
 
         ## set device size 480 * 480 pixels
         par(fin = c(480/72, 480/72))
         ## here creates the plot and send it to png file:
         png(file = "plot2.png")
-        ## plotting
+        ## plotting:
         plot(datetime,febdata$Global_active_power,type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
         ## close the file device
         dev.off()
