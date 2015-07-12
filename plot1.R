@@ -11,7 +11,7 @@ plot1 <- function(dir="../household_power_consumption.txt") {
         par(fin = c(480/72, 480/72))
         ## here creates the plot and send it to png file:
         png(file = "plot1.png")
-        ### plotting: plot(1:10)
+        ## plotting:
         hist(febdata$Global_active_power, col="red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
         ## close the file device
         dev.off()
