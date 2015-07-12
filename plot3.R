@@ -1,7 +1,7 @@
 ## this file is to read the data and generate the picture file of plot3.png
 plot3 <- function(dir="../household_power_consumption.txt") {
         ## 'dir' is a character vector of length 1 indicating
-        ## the location of the CSV files, "../household_power_consumption.txt" by default
+        ## the location of the data files, "../household_power_consumption.txt" by default
 
         ## load the data from dates 2007-02-01 and 2007-02-02
         alldata <- read.csv(dir, header = TRUE, sep = ";", na.strings = "?")
