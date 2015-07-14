@@ -19,7 +19,7 @@ plot4 <- function(dir="../household_power_consumption.txt") {
         plot(datetime,febdata$Sub_metering_1,type = "l", xlab = "", ylab = "Energy sub metering")
         lines(datetime, febdata$Sub_metering_2, col="red")
         lines(datetime, febdata$Sub_metering_3, col="blue")
-        legend("topright", border = "white", pch = c("-","-","-"), col=c("black","blue","red"), 
+        legend("topright", border = "white",  col=c("black","blue","red"), 
                 legend=c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"),bty="n",lty=1)
         plot(datetime,febdata$Global_reactive_power,type = "l", ylab = "Global_reactive_power")
         
